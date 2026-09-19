@@ -838,21 +838,21 @@
 
             } catch (error) {
 
-                console.error(error);
+    console.error("UPLOAD ERROR:", error);
 
-                statusText.textContent =
-                    "Upload failed. Please try again.";
+    statusText.textContent =
+        "Upload failed.";
 
-                submitBtn.disabled = false;
+    submitBtn.disabled = false;
 
-                submitBtn.innerHTML =
-                    "✅ Submit Photo";
+    submitBtn.innerHTML =
+        "✅ Submit Photo";
 
-                alert(
-                    "Photo upload failed."
-                );
+    alert(
+        "Photo upload failed:\n\n" + error.message
+    );
 
-            }
+}
 
         }
     );
